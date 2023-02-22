@@ -8,11 +8,17 @@ https://docs.docker.com/buildx/working-with-buildx/
 登录dockerhub
 docker login
 PS C:\Users\TIMES\（dockerfile目录）> docker login
+
 Authenticating with existing credentials...
+
 Login Succeeded
+
 进入源码目录（Dockerfile所在目录）
+
 git clone（库地址……）
+
 cd 进入Dockerfile目录
+
 
 二，构建
 创建本地一个项目
@@ -21,6 +27,7 @@ mybuilder
 
 是否创建项目成功
 PS C:\Users\TIMES\（dockerfile目录）>  docker buildx ls
+
 NAME/NODE       DRIVER/ENDPOINT                STATUS   PLATFORMS
 mybuilder *     docker-container
 mybuilder0    npipe:////./pipe/docker_engine inactive
@@ -28,5 +35,6 @@ desktop-linux   docker
 desktop-linux desktop-linux                  running  linux/amd64, linux/arm64, linux/riscv64, linux/ppc64le, linux/s390x, linux/386, linux/arm/v7, linux/arm/v6
 default         docker
 default       default                        running  linux/amd64, linux/arm64, linux/riscv64, linux/ppc64le, linux/s390x, linux/386, linux/arm/v7, linux/arm/v6
+
 开始构建，构建命令示例如下
 PS C:\Users\TIMES\（dockerfile目录）> docker buildx build --push --platform linux/arm/v7,linux/arm64/v8,linux/amd64 -t fifaty/openaibot:main .
