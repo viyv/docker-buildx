@@ -23,7 +23,6 @@ cd 进入Dockerfile目录
 二，构建
 创建本地一个项目
 PS C:\Users\TIMES\（dockerfile目录）> docker buildx create --name <自定义名字> --use
-mybuilder
 
 是否创建项目成功
 
